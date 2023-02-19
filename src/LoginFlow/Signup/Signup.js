@@ -5,8 +5,8 @@ import CustomButton from '../../Component/CustomButton/CustomButton'
 
 export default function Signup() {
 
+   const [email, setemail]=useState('')
    const [password, setPassword]=useState('')
-
 //    console.log(password,'76776767')
 
 
@@ -19,10 +19,10 @@ export default function Signup() {
             <View style={styles.textview}>
                 <TextInput
                     style={styles.inputText}
-                    placeholder="Password"
+                    placeholder="email"
                     placeholderTextColor="#003f5c"
-                value={password}
-                onChangeText={text => setPassword(text )}
+                value={email}
+                onChangeText={text => setemail(text )}
                 />
             </View>
 
@@ -35,8 +35,17 @@ export default function Signup() {
                 </TouchableOpacity>
             </View> */}
 
-<CustomButton text='sign in'/>
+{/* <CustomButton text='sign in'/> */}
 
+<View style={styles.textview}>
+                <TextInput
+                    style={styles.inputText}
+                    placeholder="Password"
+                    placeholderTextColor="#003f5c"
+                value={password}
+                onChangeText={text => setPassword(text )}
+                />
+            </View>
 
 
 </SafeAreaView>
