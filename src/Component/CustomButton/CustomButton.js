@@ -10,7 +10,7 @@ export default function CustomButton({text}) {
         <Text style={{textAlign:"center",marginTop:15, color:"white" ,fontSize:20}}>{text}</Text>
 
 
-
+        
     </TouchableOpacity>
 </View>
 
@@ -21,10 +21,12 @@ const styles = StyleSheet.create({
 
     btn:{
 height:50,
-width:300,
+width:280,
 backgroundColor:"green",
 marginHorizontal:30,
 marginTop:20,
+marginLeft:50,
+borderRadius:20,
     },
 
 

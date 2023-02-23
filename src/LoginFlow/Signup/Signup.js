@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { View, Text, StyleSheet, TextInput, SafeAreaView, TouchableOpacity } from 'react-native'
+import { View,  Text, StyleSheet, TextInput, SafeAreaView, TouchableOpacity } from 'react-native'
 import CustomButton from '../../Component/CustomButton/CustomButton'
 
 
@@ -10,13 +10,15 @@ export default function Signup() {
 //    console.log(password,'76776767')
 
 
+
     return (
 <SafeAreaView style={styles.main}>
 
-            <Text style={styles.abc}> hello {"\n"}wellcome</Text>
+            <Text style={styles.abc}> welcome{"\n"} back</Text>
+            
 
 
-            <View style={styles.textview}>
+<View style={styles.textview}>
                 <TextInput
                     style={styles.inputText}
                     placeholder="email"
@@ -26,16 +28,8 @@ export default function Signup() {
                 />
             </View>
 
-            {/* <View>
-                <TouchableOpacity style={styles.btn}>
-                    <Text style={{textAlign:"center",marginTop:15, color:"white" ,fontSize:20}}>Sign in</Text>
-
-
-
-                </TouchableOpacity>
-            </View> */}
-
-{/* <CustomButton text='sign in'/> */}
+            
+  
 
 <View style={styles.textview}>
                 <TextInput
@@ -47,7 +41,20 @@ export default function Signup() {
                 />
             </View>
 
+            <CustomButton text='sign in'/>
+            <Text style={styles.to}>or</Text>
+             <View>
+                <TouchableOpacity style={styles.button}>
+                    <Text style={styles.too}>sign in with google</Text>
+                    
 
+
+                </TouchableOpacity>
+            </View>
+             <View style={{flexDirection:'row'}}>
+            <Text>create account?</Text>
+            <Text>Sign up</Text>
+            </View>  
 </SafeAreaView>
 
         
@@ -60,13 +67,16 @@ const styles = StyleSheet.create({
     },
 
     abc: {
-        fontSize: 20,
-        color: '#000'
+        fontSize: 40,
+        color: 'green',
+        marginLeft:35,
 
     },
+    
     textview: {
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        
     },
     inputText: {
         height: 80,
@@ -74,7 +84,8 @@ const styles = StyleSheet.create({
         color: "#000",
         // borderWidth: 1,
         borderBottomWidth:1,
-        borderRadius:15
+        borderRadius:15,
+        
     },
     btn:{
 height:50,
@@ -82,7 +93,29 @@ width:300,
 backgroundColor:"green",
 marginHorizontal:30,
 marginTop:20,
+marginLeft:50,
     },
-
+    button:{
+        height:50,
+        width:300,
+        backgroundColor:"gray",
+        marginHorizontal:30,
+        marginTop:20,
+        marginLeft:40,
+        borderRadius:20,
+            },
+to:{
+textAlign:'center',
+fontSize: 20,
+marginTop:10,
+},
+too:{
+    textAlign:'center',
+    color:'white',
+    fontSize: 20,
+marginTop:10,
+    },
+    
+    
 
 })
